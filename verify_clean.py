@@ -15,16 +15,16 @@ def main():
         "src/config.py",
         "src/models.py",
         "src/__init__.py",
-        "data/metadata.json",
-        "data/cleaned/train_cleaned.csv",
-        "data/cleaned/val_cleaned.csv", 
-        "data/cleaned/test_cleaned.csv",
-        "data/cleaned/train_engineered_optimized.csv",
-        "data/cleaned/val_engineered_optimized.csv",
-        "data/cleaned/test_engineered_optimized.csv",
-        "results/baseline_model.pkl",
-        "results/optimized_model.pkl",
-        "results/model_comparison.json"
+        "datasets/metadata.json",
+        "datasets/cleaned/train_cleaned.csv",
+        "datasets/cleaned/val_cleaned.csv", 
+        "datasets/cleaned/test_cleaned.csv",
+        "datasets/cleaned/train_engineered_optimized.csv",
+        "datasets/cleaned/val_engineered_optimized.csv",
+        "datasets/cleaned/test_engineered_optimized.csv",
+        "results_models/baseline_model.pkl",
+        "results_models/optimized_model.pkl",
+        "results_models/model_comparison.json"
     ]
     
     all_present = True

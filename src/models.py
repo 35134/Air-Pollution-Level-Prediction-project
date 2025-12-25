@@ -554,9 +554,9 @@ def main():
     from pathlib import Path
     
     # Load engineered data
-    train_file = Path("../data/cleaned/train_engineered_optimized.csv")
-    val_file = Path("../data/cleaned/val_engineered_optimized.csv")
-    test_file = Path("../data/cleaned/test_engineered_optimized.csv")
+    train_file = Path("../datasets/cleaned/train_engineered_optimized.csv")
+    val_file = Path("../datasets/cleaned/val_engineered_optimized.csv")
+    test_file = Path("../datasets/cleaned/test_engineered_optimized.csv")
     
     if not all([train_file.exists(), val_file.exists(), test_file.exists()]):
         print("Engineered data files not found. Please run feature engineering first.")

@@ -291,7 +291,7 @@ def main():
     from pathlib import Path
     
     # Load cleaned training data
-    train_file = Path("data/cleaned/train_cleaned.csv")
+    train_file = Path("datasets/cleaned/train_cleaned.csv")
     
     if not train_file.exists():
         print(f"Cleaned training data not found: {train_file}")
@@ -320,7 +320,7 @@ def main():
         print(f"{i:2d}. {feature}: {importance:.3f}")
     
     # Save engineered data
-    output_file = Path("data/cleaned/train_engineered_optimized.csv")
+    output_file = Path("datasets/cleaned/train_engineered_optimized.csv")
     train_engineered.to_csv(output_file)
     print(f"\nOptimized engineered data saved to: {output_file}")
     
@@ -328,12 +328,12 @@ def main():
     print("\nProcessing validation and test data...")
     
     for dataset in ['val', 'test']:
-        data_file = Path(f"data/cleaned/{dataset}_cleaned.csv")
+        data_file = Path(f"datasets/cleaned/{dataset}_cleaned.csv")
         if data_file.exists():
             df = pd.read_csv(data_file, index_col=0, parse_dates=True)
             df_engineered = engineer.engineer_features_optimized(df)
             
-            output_file = Path(f"data/cleaned/{dataset}_engineered_optimized.csv")
+            output_file = Path(f"datasets/cleaned/{dataset}_engineered_optimized.csv")
             df_engineered.to_csv(output_file)
             print(f"Processed {dataset} data: {df.shape} -> {df_engineered.shape}")
     

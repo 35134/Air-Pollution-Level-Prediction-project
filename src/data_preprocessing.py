@@ -403,7 +403,7 @@ class DataPreprocessor:
             val_df.to_csv(CLEANED_DATA_DIR / "val_cleaned.csv")
             test_df.to_csv(CLEANED_DATA_DIR / "test_cleaned.csv")
             
-            logger.info("Cleaned data saved to data/cleaned/")
+            logger.info("Cleaned data saved to datasets/cleaned/")
         
         # Generate and save preprocessing report
         report = self.generate_preprocessing_report()
@@ -424,7 +424,7 @@ def main():
     from pathlib import Path
     
     # Load the combined dataset
-    data_file = Path("data/raw/beijing_air_quality_combined.csv")
+    data_file = Path("datasets/raw/beijing_air_quality_combined.csv")
     
     if not data_file.exists():
         print(f"Data file not found: {data_file}")

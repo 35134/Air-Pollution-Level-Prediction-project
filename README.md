@@ -16,7 +16,7 @@ A clean, production-ready machine learning project for predicting PM2.5 air poll
 
 ```
 Air-Pollution-Level-Prediction/
-├── data/
+├── datasets/
 │   ├── metadata.json                          # Dataset documentation
 │   └── cleaned/
 │       ├── train_cleaned.csv                  # Training data (baseline)
@@ -32,7 +32,7 @@ Air-Pollution-Level-Prediction/
 │   ├── features.py                            # Feature engineering
 │   ├── models.py                              # Model implementations
 │   └── evaluation.py                          # Evaluation metrics
-├── results/
+├── results_models/
 │   ├── baseline_model.pkl                     # Trained Linear Regression
 │   ├── optimized_model.pkl                    # Trained XGBoost model
 │   └── model_comparison.json                  # Performance metrics
@@ -127,12 +127,12 @@ python main.py
 
 ## 📁 Project Structure
 
-- **data/**: Dataset files and metadata
+- **datasets/**: Dataset files and metadata
 - **src/**: Source code modules
-- **results/**: Trained models and comparisons
+- **results_models/**: Trained models and comparisons
 - **notebooks/**: Jupyter notebooks for exploration
 - **src/**: Source code modules
-- **results/**: Model outputs and comparisons
+- **results_models/**: Model outputs and comparisons
 
 ## 🏆 Final Project Status
 

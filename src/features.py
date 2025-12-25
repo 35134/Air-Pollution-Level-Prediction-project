@@ -573,7 +573,7 @@ def main():
     from pathlib import Path
     
     # Load cleaned training data
-    data_file = Path("data/cleaned/train_cleaned.csv")
+    data_file = Path("datasets/cleaned/train_cleaned.csv")
     
     if not data_file.exists():
         print(f"Cleaned data file not found: {data_file}")
@@ -605,12 +605,12 @@ def main():
         print(f"{i:2d}. {feature}: {importance:.3f}")
     
     # Save engineered data
-    output_file = Path("data/cleaned/train_engineered.csv")
+    output_file = Path("datasets/cleaned/train_engineered.csv")
     df_engineered.to_csv(output_file)
     print(f"\nEngineered data saved to: {output_file}")
     
     # Save feature report
-    report_file = Path("data/cleaned/feature_engineering_report.txt")
+    report_file = Path("datasets/cleaned/feature_engineering_report.txt")
     with open(report_file, 'w') as f:
         f.write(engineer.generate_feature_report())
     print(f"Feature engineering report saved to: {report_file}")
