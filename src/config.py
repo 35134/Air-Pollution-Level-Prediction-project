@@ -125,3 +125,4 @@ SAVE_PLOTS = True
 # Academic reporting
 CONFIDENCE_LEVEL = 0.95  # 95% confidence intervals
 SIGNIFICANCE_LEVEL = 0.05  # Statistical significance threshold
+# Final Project

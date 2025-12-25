@@ -36,3 +36,4 @@ If you need the full engineered datasets, install Git LFS and use the .gitattrib
 - Optimized: XGBoost with 63 engineered features
 - Improvement: 86.2% reduction in RMSE (24.30 → 3.35 μg/m³)
 - Model Accuracy: R² = 0.999
+---\n\n**Note**: This documentation was finalized as part of the final project submission.
