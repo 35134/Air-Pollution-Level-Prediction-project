@@ -1,0 +1,143 @@
+{
+  "dataset_name": "Beijing Multi-Site Air-Quality Data",
+  "source_url": "https://archive.ics.uci.edu/ml/datasets/beijing+multi+site+air+quality+data",
+  "maintainer": "Beijing Municipal Environmental Monitoring Center",
+  "temporal_coverage": {
+    "start": "2013-03-01",
+    "end": "2017-02-28",
+    "total_days": 1460,
+    "frequency": "hourly"
+  },
+  "spatial_coverage": {
+    "city": "Beijing, China",
+    "monitoring_stations": 12,
+    "stations_list": [
+      "Aotizhongxin",
+      "Changping",
+      "Dingling",
+      "Dongsi",
+      "Guanyuan",
+      "Gucheng",
+      "Huairou",
+      "Nongzhanguan",
+      "Shunyi",
+      "Tiantan",
+      "Wanliu",
+      "Wanshouxigong"
+    ]
+  },
+  "data_characteristics": {
+    "total_records": 420768,
+    "features": 18,
+    "missing_data_percentage": 5.2,
+    "file_format": "CSV files (one per station per year)"
+  },
+  "features": {
+    "pollutants": {
+      "PM2.5": {
+        "unit": "μg/m³",
+        "description": "Particulate matter with diameter ≤ 2.5 micrometers",
+        "range": "0-994 μg/m³",
+        "missing_percentage": 5.1
+      },
+      "PM10": {
+        "unit": "μg/m³",
+        "description": "Particulate matter with diameter ≤ 10 micrometers",
+        "range": "3-999 μg/m³",
+        "missing_percentage": 4.8
+      },
+      "SO2": {
+        "unit": "μg/m³",
+        "description": "Sulfur dioxide concentration",
+        "range": "2-999 μg/m³",
+        "missing_percentage": 5.3
+      },
+      "NO2": {
+        "unit": "μg/m³",
+        "description": "Nitrogen dioxide concentration",
+        "range": "4-999 μg/m³",
+        "missing_percentage": 4.9
+      },
+      "CO": {
+        "unit": "mg/m³",
+        "description": "Carbon monoxide concentration",
+        "range": "0.1-99.9 mg/m³",
+        "missing_percentage": 5.2
+      },
+      "O3": {
+        "unit": "μg/m³",
+        "description": "Ozone concentration",
+        "range": "5-999 μg/m³",
+        "missing_percentage": 5.0
+      }
+    },
+    "meteorological": {
+      "TEMP": {
+        "unit": "°C",
+        "description": "Temperature",
+        "range": "-19.5 to 42.2 °C",
+        "missing_percentage": 0.1
+      },
+      "PRES": {
+        "unit": "hPa",
+        "description": "Atmospheric pressure",
+        "range": "990.0 to 1040.0 hPa",
+        "missing_percentage": 0.1
+      },
+      "DEWP": {
+        "unit": "°C",
+        "description": "Dew point temperature",
+        "range": "-28.7 to 28.6 °C",
+        "missing_percentage": 0.1
+      },
+      "RAIN": {
+        "unit": "mm",
+        "description": "Precipitation amount",
+        "range": "0 to 64.8 mm",
+        "missing_percentage": 0.1
+      },
+      "wd": {
+        "unit": "categorical",
+        "description": "Wind direction (16 compass directions)",
+        "missing_percentage": 0.1
+      },
+      "WSPM": {
+        "unit": "m/s",
+        "description": "Wind speed",
+        "range": "0.1 to 19.5 m/s",
+        "missing_percentage": 0.1
+      }
+    },
+    "temporal": {
+      "year": {
+        "unit": "year",
+        "description": "Year of observation",
+        "range": "2013-2017"
+      },
+      "month": {
+        "unit": "month",
+        "description": "Month of observation",
+        "range": "1-12"
+      },
+      "day": {
+        "unit": "day",
+        "description": "Day of month",
+        "range": "1-31"
+      },
+      "hour": {
+        "unit": "hour",
+        "description": "Hour of day",
+        "range": "0-23"
+      }
+    }
+  },
+  "quality_notes": {
+    "missing_data_pattern": "Missing data primarily occurs in early monitoring period (2013-2014) when some stations were not yet operational",
+    "data_validation": "All negative pollutant concentrations have been flagged as invalid",
+    "outlier_treatment": "Values exceeding physically plausible ranges are marked as missing",
+    "temporal_consistency": "Hourly measurements are continuous with rare gaps > 6 hours"
+  },
+  "usage_license": "Open access for research purposes with proper attribution to UCI Machine Learning Repository",
+  "download_date": "2025-12-25",
+  "citation": "Liang, X., Zou, T., Guo, B., Li, S., Zhang, H., Zhang, S., Huang, H. and Chen, S. X. (2015). Assessing Beijing's PM2.5 pollution: severity, weather impact, APEC and winter heating. Proceedings of the Royal Society A, 471, 20150257."
+}
