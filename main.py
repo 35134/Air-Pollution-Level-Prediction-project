@@ -24,9 +24,9 @@ def main():
         print("Step 1: Loading and preparing data...")
         
         # Load preprocessed data
-        train_df = pd.read_csv('datasets/cleaned/train_cleaned.csv', index_col=0, parse_dates=True)
-        val_df = pd.read_csv('datasets/cleaned/val_cleaned.csv', index_col=0, parse_dates=True)
-        test_df = pd.read_csv('datasets/cleaned/test_cleaned.csv', index_col=0, parse_dates=True)
+        train_df = pd.read_csv('datasets/data/cleaned/train_cleaned.csv', index_col=0, parse_dates=True)
+        val_df = pd.read_csv('datasets/data/cleaned/val_cleaned.csv', index_col=0, parse_dates=True)
+        test_df = pd.read_csv('datasets/data/cleaned/test_cleaned.csv', index_col=0, parse_dates=True)
         
         print("Data loaded successfully!")
         print(f"   Training set: {train_df.shape}")
@@ -69,9 +69,9 @@ def main():
         print("\nStep 3: Training optimized model with consistent features...")
         
         # Load engineered data but ensure consistency
-        train_eng = pd.read_csv('datasets/cleaned/train_engineered_optimized.csv', index_col=0, parse_dates=True)
-        val_eng = pd.read_csv('datasets/cleaned/val_engineered_optimized.csv', index_col=0, parse_dates=True)
-        test_eng = pd.read_csv('datasets/cleaned/test_engineered_optimized.csv', index_col=0, parse_dates=True)
+        train_eng = pd.read_csv('datasets/data/cleaned/train_engineered_optimized.csv', index_col=0, parse_dates=True)
+        val_eng = pd.read_csv('datasets/data/cleaned/val_engineered_optimized.csv', index_col=0, parse_dates=True)
+        test_eng = pd.read_csv('datasets/data/cleaned/test_engineered_optimized.csv', index_col=0, parse_dates=True)
         
         # Use only numeric features that exist in all datasets
         common_features = set(train_eng.columns) & set(val_eng.columns) & set(test_eng.columns)
